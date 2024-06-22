@@ -1,0 +1,1215 @@
+/* Global styles */
+body {
+  background: url("img/bg1.png") no-repeat top, url("img/bg3.jpg") no-repeat; ;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: 1550px auto;
+  min-height: 60vh; /* Ensure the body is at least the height of the viewport */
+  background-color: rgb(2, 2, 2);
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+  padding: 17px 0;
+  position: fixed; /* Fixed positioning for the header */
+  width: 100%; /* Full width */
+  top: 0; /* Fixed to the top */
+  z-index: 1000; /* Ensure header stays above other content */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap; /* Allow wrapping of content */
+}
+
+.logo img {
+  margin-left: 12px;
+  height: 41px; /* Adjust height as needed */
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of menu items */
+  margin-left: 240px;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 20px;
+}
+
+.menu a {
+  font-size: 17px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #848895;
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: -10px;
+  flex-wrap: wrap; /* Allow wrapping of search bar */
+}
+
+.search input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #848895;
+  border-radius: 4px;
+  background-color: rgba(22, 22, 22, 0.655); /* Semi-transparent white */
+  color: black;
+  width: 80px; /* Adjust width as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    margin-top: 10px;
+    flex-direction: column; /* Stack menu items vertically */
+    margin-left: 0; /* Remove left margin for vertical stack */
+  }
+
+  .menu li {
+    margin: 5px 0; /* Adjust margin for vertical stack */
+  }
+
+  .menu a {
+    margin-left: 0; /* Remove left margin for vertical stack */
+  }
+
+  .search {
+    margin-top: 10px;
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .search input[type="text"] {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 300px; /* Limit maximum width */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0;
+  }
+
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .search {
+    margin-right: 0;
+  }
+
+  .search input[type="text"] {
+    max-width: 100%; /* Full width */
+  }
+}
+
+/* Container and Box Styles */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px; /* Optional padding to create space around the content */
+  box-sizing: border-box; /* Ensures padding is included in the max-width calculation */
+}
+
+.box {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.box h1 {
+  font-size: 4.5rem;
+  letter-spacing: -0.04em;
+  line-height: 4.7rem;
+  color: white;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 160px;
+  font-family: sans-serif;
+}
+
+.box p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: rgb(208, 208, 220);
+  max-width: 38%;
+  margin: 33px auto 0; /* Margin to space it below the h1 */
+  font-family: sans-serif;
+}
+
+button {
+  padding: 16.5px 28px;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 26px;
+  margin-top: 47px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#start-b {
+  background: linear-gradient(
+    45deg,
+    rgb(178, 41, 232),
+    rgb(131, 25, 197),
+    rgb(43, 0, 83)
+  );
+  color: white;
+  margin-left: 30px;
+  padding: 16px 19px;
+}
+
+#read-b {
+  margin-right: 40px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: 16px 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .box h1 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-top: 40px;
+  }
+
+  .box p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin: 10px auto 0;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+}
+
+/* Additional Styling */
+#sen {
+  font-size: 0.9rem;
+  color: rgb(124, 160, 249);
+  max-width: 80%;
+  margin: 30px auto 0; /* Margin for spacing */
+  line-height: 1.75rem; /* Line height */
+  font-family: sans-serif;
+  margin-top: 90px;
+}
+
+.image {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Center the images vertically */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Space between images */
+  padding: 20px;
+}
+
+.image img {
+  max-width: 100px; /* Adjust size as needed */
+  max-height: 100px; /* Adjust size as needed */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-top: -50px;
+  object-fit: contain; /* Ensure the images fit within the bounds without distortion */
+}
+
+/* Responsive adjustments for images */
+@media (max-width: 768px) {
+  .image img {
+    max-width: 70px; /* Adjust size for smaller screens */
+    max-height: 70px; /* Adjust size for smaller screens */
+  }
+}
+
+.container-1 {
+  max-width: 1060px; /* Maximum width of the container */
+  height: 340px;
+  width: 100%;
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  margin-top: 22px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  text-align: left; /* Align text to the left */
+  background-color: #1b1625; /* Light background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Optional: Drop shadow for depth */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+}
+
+.container-1 .content {
+  display: flex; /* Use flexbox for content layout */
+  align-items: center; /* Center items vertically */
+}
+
+.container-1 img {
+  max-width: 460px; /* Responsive image width */
+  height: 280px; /* Maintain aspect ratio */
+  margin-left: 20px; /* Space between image and text */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px; /* Rounded corners for the image */
+}
+
+.container-1 .text {
+  flex: 1; /* Allow text to take remaining space */
+}
+
+.container-1 h1 {
+  font-size: 1.7rem; /* Heading font size */
+  margin-bottom: 10px; /* Space below heading */
+  margin-left: 30px;
+  font-family: sans-serif;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+
+.container-1 p {
+  font-size: 1rem; /* Paragraph font size */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 20px; /* Space below paragraph */
+  margin-left: 30px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+
+.container-1 .read-more {
+  display: inline-block; /* Display button inline */
+  padding: 10px 20px; /* Button padding */
+  font-size: 1rem; /* Button font size */
+  background-color: #000000; /* Button background color */
+  color: white; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  border: 1px solid white; /* Remove border */
+  border-radius: 18px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: 225px;
+}
+
+#pyments {
+  padding: 10px 10px; /* Button padding */
+  font-size: 1rem; /* Button font size */
+  background: linear-gradient(
+    45deg,
+    #00ffbf,
+    #90dbf4,
+    #007bff
+  ); /* Multi-color gradient background */
+  color: rgb(0, 0, 0); /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 19px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: 225px;
+  margin-top: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Drop shadow for depth */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #pyments {
+    font-size: 0.9rem; /* Decrease font size on smaller screens */
+    padding: 8px 16px; /* Adjust padding on smaller screens */
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the flex container */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.left-side,
+.right-side {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-side {
+  color: white;
+  flex: 1; /* Allow this section to take up available space */
+  max-width: 30%; /* Max width for large screens */
+  font-size: 40px;
+  margin-left: 90px;
+  margin-top: 110px;
+}
+
+.vertical-line {
+  width: 2px;
+  background-color: #ffffff; /* Black color for the vertical line */
+  margin: 0 20px; /* Space around the vertical line */
+  height: auto;
+}
+
+.right-side {
+  font-size: 60px;
+  color: white;
+  flex: 1; /* Allow this section to take up available space */
+  max-width: 40%; /* Max width for large screens */
+  margin-left: 170px;
+  margin-top: 80px;
+}
+
+.stat h2 {
+  background: linear-gradient(
+    90deg,
+    rgb(223, 150, 251),
+    rgb(175, 81, 234),
+    rgb(28, 0, 30)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.small-text {
+  font-size: 20px;
+  margin-top: -70px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+  .vertical-line {
+    display: none; /* Hide the vertical line on small screens */
+  }
+  .left-side,
+  .right-side {
+    max-width: 100%; /* Full width for smaller screens */
+    margin: 10px 0; /* Reduced margin */
+  }
+}
+
+.boxes {
+  background: url("img/bg3.jpg") no-repeat bottom;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: white;
+}
+  
+  .L-side {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .L-side p {
+    font-size: 2.6rem; /* Smaller font size for the left-side paragraph */
+    color: white;
+    width: 20%;
+    margin-left: 110px;
+    margin-top: 84.5px;
+  }
+  
+  .R-side {
+    color: white;
+    flex: 2;
+    display: flex;
+    justify-content: flex-end; /* Align containers to the right */
+    padding: 20px;
+    box-sizing: border-box;
+    width: 30%;
+    margin-left: 750px;
+    margin-top: -240px;
+  }
+  
+  h3,
+  h4 {
+    margin-left: 35px;
+    font-size: 24px;
+    text-align: left;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 22px 139px;
+  }
+  
+  .grid-item {
+    width: 151%;
+    background-color: rgba(13, 13, 13, 0.782);
+    padding: 8px 1px 1px 1px;
+    box-sizing: border-box;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .grid-item p{
+    text-align: left;
+    width: 83.5%;
+    margin-left: 34px;
+    color: rgb(222, 222, 222);
+  }
+
+  #four-t{
+    margin-top: -15px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .boxs {
+      flex-direction: column;
+      align-items: center;
+    }
+    .L-side,
+    .R-side {
+      max-width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .grid-container {
+      grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+  }
+  
+  h6 {
+    color: white;
+    margin-left: 110px;
+    font-size: 13px;
+  }
+
+  .images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .LF-side p {
+    font-size: 38px;
+    color: white;
+    margin: 0;
+    margin-left: 125px;
+  }
+  
+  .RT-side .case-studies-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    cursor: pointer;
+    margin-right: 110px;
+    margin-top: 25px;
+    text-align: center;
+  }
+  
+  .RT-side .case-studies-btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .images {
+      flex-direction: column;
+      align-items: center;
+    }
+    .LF-side, .RT-side {
+      margin: 10px 0;
+    }
+    .RT-side .case-studies-btn {
+      width: 100%; /* Full width button on smaller screens */
+      text-align: center;
+    }
+  }
+
+
+  .blue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  max-width: 84%;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 17px;
+}
+
+.blue img:hover {
+    filter: brightness(120%); /* Increase brightness to 120% on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+.overlay {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.case-study-btn {
+  font-size: 12px;
+  padding: 10px 10px;
+  background-color: rgb(153 69 255);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2%;
+}
+
+.xp-description {
+  color: white;
+}
+
+.xp-description h1 {
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.xp-description p {
+  font-size: 18px;
+  margin: 0px 0 90px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .blue {
+    padding: 10px;
+  }
+  
+  .image-container {
+    max-width: 100%;
+  }
+  
+  .overlay {
+    bottom: 10px; /* Adjust position on smaller screens */
+    left: 10px; /* Adjust position on smaller screens */
+    padding: 10px;
+  }
+  
+  .case-study-btn {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  
+  .xp-description h1 {
+    font-size: 32px;
+  }
+  
+  .xp-description p {
+    font-size: 14px;
+  }
+}
+
+.arrow-btn {
+  background-color:transparent;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 0px; /* Smaller width */
+  height: 55px; /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px; /* Adjust margin as needed */
+  margin-top: -65px;
+}
+
+.arrow-btn:hover{
+  color: black;
+  background-color: white;
+}
+
+.image3-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  gap: 5px; /* Adjust the gap between images as per your preference */
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+  padding: 10px 0; /* Optional padding to provide space around the container */
+}
+
+.image3 {
+  position: relative; /* Necessary for absolute positioning inside it */
+  flex: 0 0 auto; /* Prevent flex items from growing and shrinking */
+  width: 27%; /* Limit the width of each image */
+  height: 280px; /* Set a specific height for the images */
+  margin: 0; /* Remove default margins */
+}
+
+.image3 img {
+  width: 100%; /* Ensure images don't exceed their container width */
+  height: 100%; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below inline images */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  border-radius: 15px;
+}
+
+.image3 img:hover {
+  filter: brightness(160%);
+}
+
+.over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  box-sizing: border-box; /* Ensure padding is inside the overlay */
+  background: rgba(0, 0, 0, 0.5); /* Optional: dark overlay */
+  color: white; /* Text color */
+  z-index: 1; /* Ensure overlay is on top of the image */
+  pointer-events: none; /* Allow hover events to pass through */
+}
+
+.case-study-btn {
+  background-color: rgb(153 69 255);
+  color: white;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  cursor: default; /* Not clickable */
+  pointer-events: all; /* Allow pointer events */
+  margin-left: 17.5px;
+}
+
+.text .title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 17.5px;
+}
+
+.text .description {
+  font-size: 16px;
+  width: 70%;
+  margin-top: 32px;
+  margin-left: 10px;
+  margin-left: 17.5px;
+}
+
+.arrowbtn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 30px;
+  height: 55px; /* Adjusted height */
+  position: absolute;
+  top: 30%; /* Center vertically */
+  right: 20px; /* Adjust horizontal position */
+  transform: translateY(-50%); /* Center vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: all; /* Allow pointer events */
+}
+
+.arrowbtn:hover{
+  background-color: white;
+  color: black;
+}
+
+.build {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.LLLside p {
+  font-size: 50px; /* Adjust font size as needed */
+  color: white;
+  margin-left: 110px;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  margin-right: 100px;
+}
+
+.buttons button {
+  padding: 12px 12px;
+  background-color: #1b1e28; /* Blue background color */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 19px;
+  font-size: 12px; /* Adjust font size as needed */
+  cursor: pointer;
+  margin-right: 5px; /* Adjust margin between buttons */
+}
+
+.buttons button:first-child {
+  margin-left: 0; /* Remove left margin from the first button */
+}
+
+.buttons button:last-child {
+  margin-right: 0; /* Remove right margin from the last button */
+}
+
+
+.logo-img {
+  float: left;
+  width: 620px; /* Adjust the width as per your preference */
+  height: 430px;
+  margin-left: 125px; /* Adjust the left margin as per your layout */
+  border-top-left-radius: 8px; /* Rounded corner for top left */
+  border-bottom-left-radius: 8px; /* Rounded corner for bottom left */
+  box-shadow: -15px 20px 40px rgba(153, 69, 255, 0.2); ; 
+}
+
+.right-container {
+  border-top-right-radius: 8px; /* Rounded corner for top left */
+  border-bottom-right-radius: 8px;
+  max-width: 570px; /* Maximum width of the container */
+  height: 56vh; /* Fixed height of the container */
+  padding: 20px; /* Adds padding around the content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background-color: rgb(23, 27, 41); /* Light background color */
+  margin: 20px; /* Adds margin around the container */
+  margin-top: 1px; /* Additional bottom margin to lift the container */
+  overflow-y: auto; /* Allows scrolling if content exceeds height */
+  box-shadow: 15px 20px 40px rgba(153,69,255,.2); 
+}
+
+.right-container img {
+  max-width: 40%; /* Ensures image is responsive */
+  height: auto; /* Allows image to adjust proportionally */
+  display: block; /* Removes default bottom margin */
+  margin-top: 90px; /* Space between image and paragraph */
+  margin-left: 20px;
+  margin-bottom: 20PX;
+}
+
+.right-container p {
+  font-family: 'Roboto', Arial, sans-serif; /* Apply custom font to paragraph */
+  text-align: left; /* Justifies text for neat appearance */
+  line-height: 1.6; /* Adjust line height as needed */
+  margin: 0; /* Remove default margin */
+  color: white;
+  width: 80%;
+  margin-left: 20px;
+}
+
+.right-container svg {
+  margin-left: 4px; /* Space between text and icon */
+  width: 1em; /* Set the width of the icon relative to font size */
+  height: 1em; /* Set the height of the icon relative to font size */
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+#learn:hover{
+  cursor: pointer;
+  color: #dbf5fd;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  body {
+    justify-content: center; /* Center the container on smaller screens */
+    align-items: center; /* Center the container on smaller screens */
+  }
+
+  .right-container {
+    max-width: 100%; /* Full width on smaller screens */
+    height: auto; /* Auto height on smaller screens */
+    max-height: 100vh; /* Full height on smaller screens */
+    margin: 20px; /* Add margin around the container */
+    box-shadow: none; /* Remove shadow */
+    border: none; /* Remove border */
+    background-color: transparent; /* Remove background color */
+    margin-bottom: 20px; /* Adjust bottom margin for smaller screens */
+  }
+}
+
+.all-img {
+  display: flex;
+  justify-content: center;
+  gap: 237px;
+  margin: 20px;
+}
+
+.all-img img {
+  aspect-ratio: 3/2;
+  max-width: 100%;
+  height: auto; /* Ensures images maintain aspect ratio */
+  max-height: 150px; /* Adjust the maximum height as needed */
+  object-fit: contain; /* Ensures the entire image fits within its container */
+}
+
+.tag p {
+  font-size: 2em; /* Default large font size */
+  text-align: left;
+  margin-left: 150px;
+  margin-top: 130px;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .tag p {
+      font-size: 1.8em;
+  }
+}
+
+@media (max-width: 992px) {
+  .tag p {
+      font-size: 1.6em;
+  }
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items horizontally */
+  width: 340px; 
+  height: 240px; 
+  background-color: rgb(23, 27, 41); /* Background color as specified */
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding in the height and width */
+  margin-bottom: -222px;
+}
+
+.text-container {
+  text-align: center;
+  margin-bottom: 20px;
+  flex: 1; /* Allow the text container to grow and take available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text vertically */
+}
+
+.text-container h2 {
+  color: rgb(231 241 126);
+  font-size: 3em;
+  margin: 0;
+}
+
+.text-container p {
+  color: white;
+  font-size: 1em;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.left-image {
+  width: 340px; 
+  height: 248px;
+  border-radius: 5px;
+  object-fit: cover; 
+  margin-top: 20px;
+  margin-bottom: -5px
+}
+
+.large-image {
+  margin-top: -15px;
+  width: 50%;
+  height: auto;
+  min-height: 70vh;
+  border-radius: 10px; 
+  margin-left: 8px;
+}
+
+/*  */
+.container-r {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns items to the right */
+  max-width: 800px; /* Adjust max width as needed */
+  margin: 0 auto; /* Centers the container */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-container-r{
+  align-self: flex-start; /* Aligns image at the start (top) of the container */
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+.top-image {
+  max-width: 48%; /* Ensure image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  min-height: 35vh;
+  margin-left: 746PX;
+  margin-top: -515px;
+  border-radius: 10px;
+  margin-bottom: 800px;
+}
+
+.right-container-r {
+  width: 365px; /* Adjusted width */
+  height: 233px;
+  background-color: rgb(23, 27, 41);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 4759px;
+  right: 28px;
+}
+.right-container-r h2 {
+  margin: 0;
+  color: rgb(231 241 126);
+  font-size: 3em;
+  margin-top: 45px;
+}
+.right-container-r p {
+  margin: 18px 0 0;
+  color: white;
+  font-size: 1em;
+}
+
+/*  */
+  
+
+@media (max-width: 768px) {
+  .tag p {
+      font-size: 1.4em;
+  }
+}
+
+@media (max-width: 576px) {
+  .tag p {
+      font-size: 1.2em;
+  }
+}
+
+@media (max-width: 400px) {
+  .tag p {
+      font-size: 1em;
+  }
+}
+
+.bg{
+  background: url("img/bg3.jpg") no-repeat bottom center ; 
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  padding: 20px;
+  color: white;
+}
+
+.last-con {
+  background-color: rgba(58, 45, 45, 0.523); /* Semi-transparent gray background */
+  filter: blur(4px); /* Adds a blur effect */
+  padding: 20px; /* Padding inside the container */
+  margin: 0 auto;
+  width: 80%;
+  height: 62vh;
+  border-radius: 17px;
+  margin-top: -447px;
+}
+
+.last-con p {
+  font-weight: bold;
+  font-size: 50px; /* Adjust font size as needed */
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff; /* Text color */
+  margin-top: 53px;
+}
+
+.last-con button {
+  display: block;
+  margin: 20px auto; /* Center align the button */
+  padding: 16px 22px; /* Adjust padding as needed */
+  font-size: 16px; /* Button text size */
+  background: linear-gradient(90deg,rgb(204, 114, 240),rgb(148, 64, 200),rgb(81, 4, 130),rgb(59, 0, 96));
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 25px;
+  margin-top: 50.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.last-con button:hover {
+  background-color: #ff6f61; /* Darker red on hover */
+} 
+
+
+/* footer */
+footer {
+  background-image: radial-gradient(farthest-side at bottom left, #271d3b, transparent 900px), radial-gradient(farthest-corner at bottom right, #3a233f, transparent 1000px);
+  padding: 12px 0; /* Adjust padding as needed */
+  color: white;
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Full width of its container */
+  height: 420px;
+  box-sizing: border-box; /* Include padding and border in the total width */
+  position: relative; /* Relative positioning */
+  margin-top: 100px; /* Push the footer down */
+  margin-left: auto; /* Align to the left */
+  margin-right: auto; /* Align to the right */
+}
+
+.footer-content {
+  max-width: 1200px; /* Set maximum width for content inside footer */
+  margin: 0 auto; /* Center content horizontally */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align items to the left */
+  margin-top: 90px;
+  margin-left: 150px;
+}
+
+.manage-by {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust spacing between sections */
+  margin-top: -30px;
+}
+
+.manage-by span {
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.solana-logo {
+  margin-bottom: 10px; /* Adjust spacing between sections */
+}
+
+.solana-logo img {
+  width: 230px; /* Adjust logo size as needed */
+  height: auto;
+  margin-top: -8px;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.social-icons img {
+  width: 30px; /* Adjust icon size as needed */
+  height: auto;
+}
+
+.copyright {
+  font-size: 15px; /* Adjust font size as needed */
+  margin-top: 20px; /* Adjust spacing between sections */
+  color: rgb(180, 180, 180);
+  margin-left: 3px;
+}
+
+#gray{
+  filter: invert(0.4);
+}
+
+#black{
+  filter: invert(0.6);
+}
+
+#github{
+  filter: invert(0.3);
+}
+
+.solona {
+  font-family: 'Solona', sans-serif;
+}
+
+.footer-right {
+  float: right;
+  margin-left: 800px;
+  margin-top: -170px;
+}
+
+.footer-section {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.footer-links {
+  
+  list-style-type: none;
+  padding: 0;
+  margin-left: 800px;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgb(93, 93, 93); /* Adjust link color */
+}
+
+.footer-links a:hover {
+  color: #fff; /* Adjust link hover color */
+}
+
